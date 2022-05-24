@@ -18,7 +18,19 @@ namespace Oculus.Interaction.Samples
 {
     public class SceneLoader : MonoBehaviour
     {
+        public static SceneLoader instance;
         private bool _loading = false;
+
+        //Singleton
+        private void Awake(){
+            if(instance != null && instance != this){
+                Destroy(this.gameObject);
+                return;
+            }
+
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
 
         public void Load(string sceneName)
         {

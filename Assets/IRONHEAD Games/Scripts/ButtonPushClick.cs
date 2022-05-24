@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
+using UnityEngine.SceneManagement;
+
+
 public class ButtonPushClick : MonoBehaviour
 {
     public float MinLocalY = 0.25f;
@@ -17,6 +20,7 @@ public class ButtonPushClick : MonoBehaviour
     public TextMeshProUGUI timeText;
 
     public float smooth = 0.1f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -82,7 +86,7 @@ public class ButtonPushClick : MonoBehaviour
 
         }
         //Load Scene
-        
+        SceneLoaderAsync.instance.Load("GameScene");
         
     }
 
