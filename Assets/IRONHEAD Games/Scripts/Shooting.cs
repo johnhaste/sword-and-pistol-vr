@@ -15,6 +15,8 @@ public class Shooting : MonoBehaviour
     public Animator gunAnimator;
 
     public OVRInput.Button ShottingButton;
+
+    public GameObject slicerGameObject;
     
     // Update is called once per frame
     void Update()
@@ -48,9 +50,9 @@ public class Shooting : MonoBehaviour
         GameObject bulletGameobject = Instantiate(bulletPrefab, nozzleTransform.position, Quaternion.Euler(0, 0, 0));
         bulletGameobject.transform.forward = nozzleTransform.forward;
 
+        Physics.IgnoreCollision(bulletGameobject.GetComponent<Collider>(), slicerGameObject.GetComponent<Collider>());
+        
     }
 
    
-
-
 }
