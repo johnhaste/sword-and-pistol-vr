@@ -82,5 +82,9 @@ public class GameSceneManager : MonoBehaviour
         return timeText;
     }
 
+    public void ReturnToLobby(){
+        SceneLoaderAsync.instance.Load("LobbyScene");
+    }
+
   
 }
