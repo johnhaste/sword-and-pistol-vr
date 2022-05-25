@@ -20,6 +20,10 @@ public class GameSceneManager : MonoBehaviour
     public GameObject currentScoreUI_GameObject;
     public GameObject finalScoreUI_GameObject;
 
+    //Visuals
+    public GameObject rightHandController;
+    public GameObject pistol;
+    public GameObject laserPointer;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +39,9 @@ public class GameSceneManager : MonoBehaviour
         progressBarImage.fillAmount = Mathf.Clamp(0, 0, 1);
 
         finalScoreUI_GameObject.SetActive(false);
+        rightHandController.SetActive(false);
+        laserPointer.GetComponent<LineRenderer>().enabled = false;
+        pistol.SetActive(true);
 
     }
 
@@ -73,6 +80,10 @@ public class GameSceneManager : MonoBehaviour
         //Placing the final score ui in the right position
         //finalScoreUI_GameObject.transform.position = Quaternion.Euler(Vector3.zero);
         finalScoreUI_GameObject.transform.position = GameObject.Find("OVRCameraRig").transform.position + new Vector3(0,2.0f,4.0f);
+
+        rightHandController.SetActive(true);
+        laserPointer.GetComponent<LineRenderer>().enabled = true;
+        pistol.SetActive(false);
     }
 
 
