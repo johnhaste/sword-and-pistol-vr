@@ -580,6 +580,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &262523401 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1038146256242982, guid: a9d2de84afb308a4796cc671d3432b4d, type: 3}
+  m_PrefabInstance: {fileID: 1004543507}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &262523404 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4584207525423032, guid: a9d2de84afb308a4796cc671d3432b4d, type: 3}
@@ -1760,7 +1765,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 120006741097097638, guid: a9d2de84afb308a4796cc671d3432b4d, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9d2de84afb308a4796cc671d3432b4d, type: 3}
@@ -2316,6 +2321,7 @@ MonoBehaviour:
   finalScoreUI_GameObject: {fileID: 546668396}
   rightHandController: {fileID: 81673285}
   pistol: {fileID: 760754086}
+  laserPointer: {fileID: 262523401}
 --- !u!1 &1303733962
 GameObject:
   m_ObjectHideFlags: 0
